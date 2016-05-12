@@ -17,6 +17,7 @@ phpmyadmin:
   environment:
     MYSQL_USERNAME: root
     MYSQL_ROOT_PASSWORD: 123456
+
 mysql_db:
   image: mysql
 #  volumes:
