@@ -1,0 +1,25 @@
+justhome:
+  build: .
+#  volumes:
+#    - ~/private/justhome/www:/var/www/html
+  links:
+    - mysql_db:mysql
+  environment:
+    XDEBUG_CONFIG: idekey=PHPDEBUG
+  ports:
+    - 8080:80
+phpmyadmin:
+  image: corbinu/docker-phpmyadmin
+  links:
+    - mysql_db:mysql
+  ports:
+    - 8181:80
+  environment:
+    MYSQL_USERNAME: root
+    MYSQL_ROOT_PASSWORD: 123456
+mysql_db:
+  image: mysql
+#  volumes:
+#    - ~/private/justhome/mysql:/var/lib/mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: 123456
