@@ -1,4 +1,4 @@
-FROM php
+FROM php:apache
 
 MAINTAINER Rastislav Bertusek <rastislav.bertusek@gmail.com>
 
