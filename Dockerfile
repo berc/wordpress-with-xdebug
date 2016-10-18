@@ -1,4 +1,4 @@
-FROM wordpress
+FROM php
 
 MAINTAINER Rastislav Bertusek <rastislav.bertusek@gmail.com>
 
